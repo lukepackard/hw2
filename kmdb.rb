@@ -78,6 +78,143 @@
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+new_studio = Studio.new
+new_studio[studio] = "Warner Bros."
+new_studio.save
+
+
+# Enter movie's data 
+
+new_movie = Movie.new
+new_movie["title"] = "Batman Begins"
+new_movie["year_released"] ="2005"
+new_movie["rated"] = "PG-13"
+new_move["studio_id"] = Studio.find_by({name} => "Warner Bros."})["id"]
+new_movie.save
+
+new_movie = Movie.new
+new_movie["title"] = "The Dark Knight"
+new_movie["year_released"] ="2008"
+new_movie["rated"] = "PG-13"
+new_move["studio_id"] = Studio.find_by({name} => "Warner Bros."})["id"]
+new_movie.save
+
+new_movie = Movie.new
+new_movie["title"] = "The Dark Knight Rises"
+new_movie["year_released"] ="2012"
+new_movie["rated"] = "PG-13"
+new_move["studio_id"] = Studio.find_by({name} => "Warner Bros."})["id"]
+new_movie.save
+
+#actors
+
+new_actor = Actors.new
+new_actor["name"] = "Christian Bale" 
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] = "Michael Caine"
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] = "Liam Neeson"
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] = "Katie Holmes"
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] = "Gary Oldman"
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] = "Heath Ledger"
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] = "Aaron Eckhart" 
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] = "Maggie Gyllenhaal"
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] = "Tom Hardy"
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] =  "Joseph Gordon-Levitt"
+new_actor.save
+
+new_actor = Actors.new
+new_actor["name"] =  "Anne Hathaway"
+new_actor.save
+
+#roles
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Bruce Wayne"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Alfred"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Ra's Al Ghul"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Rachel Dawes"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Commissioner Gordon"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Joker"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Harvey Dent"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Bane"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "John Blake"
+new_actor.save
+
+new_role = Roles.new
+new_role["movie_id"] = Movie.find_by({name} => "Warner Bros."})["id"]
+new_role["actor_id"] =  Actor.find_by({actor_id} =>  "" })["id"]
+new_role["character_name"] = "Selina Kyle"
+new_actor.save
+
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -94,3 +231,13 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+movies = []
+for new_movie in all_movies
+    for new_studio in all_studios
+        title = new_movie["title"]
+        year = new_movie["year_released"]
+        rating = new_movie["title"]
+        studio = new_movie["year_released"]
+        puts "#{title} #{year}#{rating} #{studio}"
+    end
+end 
